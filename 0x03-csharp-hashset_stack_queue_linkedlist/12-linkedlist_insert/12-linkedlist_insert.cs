@@ -13,6 +13,6 @@ class LList
                 return myLList.AddBefore(current, n);
             current = current.Next;
         }
-        return current;
+        return myLList.AddAfter(current, n);
     }
 }
