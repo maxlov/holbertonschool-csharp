@@ -14,5 +14,6 @@ class LList
                 myLList.Remove(current);
                 return;
             }
+        myLList.Remove(current);
     }
 }
