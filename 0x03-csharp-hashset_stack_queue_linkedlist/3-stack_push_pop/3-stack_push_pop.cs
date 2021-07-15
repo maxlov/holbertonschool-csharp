@@ -14,7 +14,7 @@ class MyStack
             Console.WriteLine("Stack is empty");
 
         bool check = aStack.Contains(search);
-        Console.WriteLine($"Stack contains {search}: {check}");
+        Console.WriteLine($"Stack contains \"{search}\": {check}");
         if (check)
             while (aStack.Pop() != search) {};
 
