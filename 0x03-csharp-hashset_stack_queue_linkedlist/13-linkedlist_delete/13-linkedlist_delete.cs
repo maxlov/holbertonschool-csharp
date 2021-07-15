@@ -6,7 +6,8 @@ class LList
     {
         if (myLList == null || myLList.Count <= 0)
             return;
-
+        if (index < 0 || index > myLList.Count)
+            return;
         LinkedListNode<int> current = myLList.First;
         for (int i = 0; current.Next != null; i++, current = current.Next)
             if (i == index)
