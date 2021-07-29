@@ -4,15 +4,16 @@ namespace MyMath.Tests
 {
     public class Tests
     {
-        [SetUp]
-        public void Setup()
+        [Test]
+        public void TestAdd5Random([Random(-100, 100, 5)] int a, [Random(-100, 100, 5)] int b)
         {
+            Assert.AreEqual(a + b, MyMath.Operations.Add(a, b));
         }
 
         [Test]
-        public void Test1()
+        public void TestAdd1and0()
         {
-            Assert.Pass();
+            Assert.AreEqual(1, MyMath.Operations.Add(0, 1));
         }
     }
 }
