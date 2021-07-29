@@ -7,7 +7,7 @@ namespace Text.Tests
         [Test]
         public void Hello()
         {
-            string s = "hEllo";
+            string s = "hello";
             Assert.AreEqual(0, Text.Str.UniqueChar(s));
         }
 
@@ -21,8 +21,22 @@ namespace Text.Tests
         [Test]
         public void Middle()
         {
-            string s = "aaHaa";
+            string s = "aahaa";
             Assert.AreEqual(2, Text.Str.UniqueChar(s));
+        }
+
+        [Test]
+        public void Single()
+        {
+            string s = "a";
+            Assert.AreEqual(0, Text.Str.UniqueChar(s));
+        }
+
+        [Test]
+        public void Empty()
+        {
+            string s = "";
+            Assert.AreEqual(-1, Text.Str.UniqueChar(s));
         }
     }
 }
