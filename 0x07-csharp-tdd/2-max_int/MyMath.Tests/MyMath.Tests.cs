@@ -19,5 +19,12 @@ namespace MyMath.Tests
             List<int> nums = new List<int>();
             Assert.AreEqual(0, MyMath.Operations.Max(nums));
         }
+
+        [Test]
+        public void shortList()
+        {
+            List<int> nums = new List<int>() {10};
+            Assert.AreEqual(10, MyMath.Operations.Max(nums));
+        }
     }
 }
