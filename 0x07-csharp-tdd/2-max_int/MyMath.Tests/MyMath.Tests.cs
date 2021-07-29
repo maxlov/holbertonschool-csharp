@@ -26,5 +26,12 @@ namespace MyMath.Tests
             List<int> nums = new List<int>() {10};
             Assert.AreEqual(10, MyMath.Operations.Max(nums));
         }
+
+        [Test]
+        public void nullList()
+        {
+            List<int> nums = null;
+            Assert.AreEqual(0, MyMath.Operations.Max(nums));
+        }
     }
 }
