@@ -76,4 +76,10 @@ class Square : Rectangle
                 size = Height = Width = value;
         }
     }
+
+    /// <summary>Return string representation of square.</summary>
+    public override string ToString()
+    {
+        return $"[{this.GetType().Name}] {this.Width} / {this.Height}";
+    }
 }
