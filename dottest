@@ -26,5 +26,5 @@ then
         chmod -R g+w .
         chmod -R g+w /tmp/NuGetScratch/lock
 else
-        echo "Usage: ./mktest <task directory> <classlibrary>"
+        echo "Usage: ./dottest <task directory> <classlibrary>"
 fi
