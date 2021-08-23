@@ -11,19 +11,15 @@ class MatrixMath
 
         double[,] result = new double[2, 2];
         double[,] rotation = new double[,] {
-            { Math.Cos(angle) , -Math.Sin(angle) },
-            { Math.Sin(angle), Math.Cos(angle) } };
+            { Math.Cos(angle) , Math.Sin(angle) },
+            { -Math.Sin(angle), Math.Cos(angle) } };
 
         int i, j, k;
 
         for (i = 0; i < 2; i++)
             for (j = 0, result[i, j] = 0; j < 2; j++)
-            {
                 for (k = 0; k < 2; k++)
-                    result[i, j] += matrix[i, k] * rotation[k, j];
-                result[i, j] = Math.Round(result[i, j], 2);
-            }
-
+                    result[i, j] += Math.Round(matrix[i, k] * rotation[k, j], 2);
         return result;
     }
 }
