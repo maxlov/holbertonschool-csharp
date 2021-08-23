@@ -6,7 +6,7 @@ class MatrixMath
     /// <summary>Calculates rotation of matrix.</summary>
     public static double[,] Rotate2D(double[,] matrix, double angle)
     {
-        if (matrix.GetLength(0) != 2 || matrix.GetLength(1) != 2)
+        if (matrix == null || matrix.GetLength(0) != 2 || matrix.GetLength(1) != 2)
             return new double[,] { { -1 } };
 
         double[,] result = new double[2, 2];
