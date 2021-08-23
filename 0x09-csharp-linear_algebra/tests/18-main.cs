@@ -14,6 +14,10 @@ class Program
 
 		matrix2 = new double[,] { { 6, 16, 21 }, { 5, 2, 0 }, { 1, 3, 7 } };
 		printMatrix(MatrixMath.Multiply(matrix1, matrix2));
+
+		matrix1 = new double[,] { { 0, 3, 5 }, { 5, 5, 2 } };
+		matrix2 = new double[,] { { 3, 4 }, { 3, -2 }, { 4, -2 } };
+		printMatrix(MatrixMath.Multiply(matrix1, matrix2));
     }
 
 	static void printMatrix(double[,] matrix)
