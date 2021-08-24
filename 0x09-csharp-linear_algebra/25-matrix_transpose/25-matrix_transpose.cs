@@ -7,7 +7,7 @@ class MatrixMath
     public static double[,] Transpose(double[,] matrix)
     {
         if (matrix == null || matrix.GetLength(0) == 0 || matrix.GetLength(1) == 0)
-            return new double[,] { { } };
+            return new double[,] {};
 
         int oldRow =  matrix.GetLength(0);
         int oldCol = matrix.GetLength(1);
