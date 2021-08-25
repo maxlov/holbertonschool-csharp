@@ -6,10 +6,13 @@ class Program
     {
 		double[,] matrix = new double[,] { { 1, 2 }, { 3, 4 } };
 
-		printMatrix(MatrixMath.Shear2D(matrix, 'x', 2));
+		printMatrix(MatrixMath.Inverse2D(matrix));
+
+		matrix = new double[,] { { 4, 7 }, { 2, 6 } };
+		printMatrix(MatrixMath.Inverse2D(matrix));
 
 		matrix = new double[,] { { 14, -3, 0 }, { -11, -5, 3 }, { 2, -9, 13 } };
-		printMatrix(MatrixMath.Shear2D(matrix, 'y', 20));
+		printMatrix(MatrixMath.Inverse2D(matrix));
     }
 
 	static void printMatrix(double[,] matrix)
