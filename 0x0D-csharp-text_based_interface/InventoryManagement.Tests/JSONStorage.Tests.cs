@@ -1,18 +1,12 @@
 using NUnit.Framework;
+using System.Text.Json;
+using System.Text.Json.Serialization;
+using InventoryLibrary;
 
 namespace InventoryManagement.Tests
 {
-    public class Tests
+    public class JSONStorageTests
     {
-        [SetUp]
-        public void Setup()
-        {
-        }
 
-        [Test]
-        public void Test1()
-        {
-            Assert.Pass();
-        }
     }
 }

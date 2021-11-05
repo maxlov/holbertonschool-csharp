@@ -2,17 +2,8 @@ using NUnit.Framework;
 
 namespace InventoryManagement.Tests
 {
-    public class Tests
+    public class InventoryManagementTests
     {
-        [SetUp]
-        public void Setup()
-        {
-        }
 
-        [Test]
-        public void Test1()
-        {
-            Assert.Pass();
-        }
     }
 }

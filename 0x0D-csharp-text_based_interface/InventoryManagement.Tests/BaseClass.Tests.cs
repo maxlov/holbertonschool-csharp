@@ -1,18 +1,28 @@
 using NUnit.Framework;
+using System;
+using System.Collections.Generic;
+using InventoryLibrary;
 
 namespace InventoryManagement.Tests
 {
-    public class Tests
+    public class BaseClassTests
     {
-        [SetUp]
-        public void Setup()
+        [Test]
+        ///<summary>Tests to make sure each value of baseclass is created.</summary>
+        public void TestInitializeBaseClass()
         {
+            BaseClass baseInstance = new BaseClass();
+            Assert.IsInstanceOf<string>(baseInstance.id);
+            Assert.IsInstanceOf<DateTime>(baseInstance.date_created);
+            Assert.IsInstanceOf<DateTime>(baseInstance.date_updated);
         }
 
         [Test]
-        public void Test1()
+        ///<summary>Tests if creation and update are not equal.</summary>
+        public void TestDatetimeBaseClass()
         {
-            Assert.Pass();
+            BaseClass baseInstance = new BaseClass();
+            Assert.AreNotEqual(baseInstance.date_created, baseInstance.date_updated);
         }
     }
 }
