@@ -32,5 +32,20 @@ namespace InventoryLibrary
             this.price = (float)Math.Round((double)price, 2);
             this.tags = tags;
         }
+
+        /// <summary> Creates a string representation of Item </summary>
+        /// <returns> Returns string representation of Items </returns>
+        public override string ToString()
+        {
+            string item_repr = $"{this.GetType().Name}.{this.id}, Name: {this.name}";
+            if (description != null)
+                item_repr += $"\n{this.description}";
+            if (price != null)
+                item_repr += $"\nPrice: ${this.price}";
+            if (description != null)
+                foreach(string tag in tags)
+                    item_repr += tag + ',';
+            return item_repr;
+        }
     }
 }

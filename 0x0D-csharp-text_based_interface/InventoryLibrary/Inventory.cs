@@ -27,5 +27,12 @@ namespace InventoryLibrary
             this.item_id = item.id;
             this.quantity = quantity;
         }
+
+        /// <summary> Creates a string representation of Inventory </summary>
+        /// <returns> Returns string representation of Inventory </returns>
+        public override string ToString()
+        {
+            return $"{this.GetType().Name}.{this.id}\nUser.{this.user_id}, Item.{this.item_id}";
+        }
     }
 }

@@ -23,5 +23,12 @@ namespace InventoryLibrary
             date_created = DateTime.Now;
             date_updated = DateTime.Now;
         }
+
+        /// <summary> Creates a string representation of BaseClass </summary>
+        /// <returns> Returns string representation of BaseClass </returns>
+        public override string ToString()
+        {
+            return $"{this.GetType().Name}.{this.id}\nCreated:{this.date_created}, Updated:{this.date_updated}";
+        }
     }
 }

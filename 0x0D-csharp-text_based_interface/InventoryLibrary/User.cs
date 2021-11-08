@@ -17,5 +17,12 @@ namespace InventoryLibrary
         {
             this.name = name;
         }
+
+        /// <summary> Creates a string representation of User </summary>
+        /// <returns> Returns string representation of User </returns>
+        public override string ToString()
+        {
+            return $"{this.GetType().Name}.{this.id}, Name: {this.name}";
+        }
     }
 }
