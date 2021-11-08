@@ -40,7 +40,7 @@ namespace InventoryLibrary
             string item_repr = $"{this.GetType().Name}.{this.id}, Name: {this.name}";
             if (description != null)
                 item_repr += $"\n{this.description}";
-            if (price != null)
+            if (price > 0)
                 item_repr += $"\nPrice: ${this.price}";
             if (description != null)
                 foreach(string tag in tags)
