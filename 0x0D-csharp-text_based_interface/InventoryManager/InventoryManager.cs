@@ -12,6 +12,7 @@ namespace InventoryManager
         static void Main()
         {
             int status = 1;
+            bool togglePrompt = true;
             JSONStorage storage = new JSONStorage();
             InventoryManagerMessages messages = new InventoryManagerMessages();
             InventoryCommands commands = new InventoryCommands();
@@ -19,20 +20,21 @@ namespace InventoryManager
 
             while (true)
             {
-                if (status == 1)
+                if (status == 1 && togglePrompt)
                     messages.Prompt();
                 string[] command = Console.ReadLine().Split(' ');
                 switch (command[0].ToLower())
                 {
                     case "classnames":
                         commands.ClassNames();
+                        status = 0;
                         break;
                     case "all":
                         status = commands.All(storage, command);
                         break;
-                    /*case "create":
+                    case "create":
                         status = commands.Create(storage, command);
-                        break;*/
+                        break;
                     case "show":
                         status = commands.Show(storage, command);
                         break;
@@ -46,6 +48,9 @@ namespace InventoryManager
                         storage.Save();
                         Console.WriteLine("Inventory saved. Now exiting, goodbye.");
                         Environment.Exit(0);
+                        break;
+                    case "prompt":
+                        togglePrompt = !togglePrompt;
                         break;
                     default:
                         Console.WriteLine($"Command <{command[0]}> could not be found.");

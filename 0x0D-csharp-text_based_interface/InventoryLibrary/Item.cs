@@ -43,8 +43,11 @@ namespace InventoryLibrary
             if (price > 0)
                 item_repr += $"\nPrice: ${this.price}";
             if (description != null)
+            {
+                item_repr += " Tags: ";
                 foreach(string tag in tags)
                     item_repr += tag + ',';
+            }
             return item_repr;
         }
     }

@@ -44,7 +44,7 @@ namespace InventoryLibrary
         /// <param name="obj">Object to add to dictionary</param>
         public void New(BaseClass obj)
         {
-            objects.Add($"{this.GetType().Name}.{obj.id}", obj);
+            objects.Add($"{obj.GetType().Name}.{obj.id}", obj);
         }
 
         /// <summary> Serializes objects to JSON and saves to the JSON file </summary>
